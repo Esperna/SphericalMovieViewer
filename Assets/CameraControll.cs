@@ -5,7 +5,7 @@ public class CameraControll : MonoBehaviour {
 
 	void Update () {
 		transform.Rotate(
-			Vector3.right * 
+			new Vector3(0, 10, 0) * 
 			Time.deltaTime);
 	}
 }
