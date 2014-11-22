@@ -85,6 +85,7 @@ GameObject:
   - 33: {fileID: 938750205}
   - 23: {fileID: 938750204}
   - 95: {fileID: 938750203}
+  - 114: {fileID: 938750207}
   m_Layer: 0
   m_Name: Sherer100
   m_TagString: Untagged
@@ -149,6 +150,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &938750207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938750202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f46145103aed24a8f8f36198b6081e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  divingStatus: 0
 --- !u!1 &1379501280
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,6 +171,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1379501282}
   - 132: {fileID: 1379501281}
+  - 114: {fileID: 1379501283}
   m_Layer: 0
   m_Name: InitialText
   m_TagString: Untagged
@@ -200,6 +214,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1379501283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379501280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec6a9edff1c047c88753679d71a18fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1575345872
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +238,7 @@ GameObject:
   - 124: {fileID: 1575345875}
   - 81: {fileID: 1575345874}
   - 114: {fileID: 1575345873}
+  - 114: {fileID: 1575345879}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -296,6 +322,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1575345879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1575345872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b377c5b6104441a5ba2c180b2f2d8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2015850595
 Prefab:
   m_ObjectHideFlags: 0
