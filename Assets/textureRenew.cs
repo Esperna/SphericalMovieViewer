@@ -18,8 +18,8 @@ public class textureRenew : MonoBehaviour {
 	void Start (){
 		divingStatus = DivingStatus.InitialLoop;
 		texList = new List<Texture> ();
-		for (int i = 1; i <= 77; i++) {
-			texList.Add (Resources.Load ("frame" + i.ToString ()) as Texture);
+		for (int i = 1; i <= 225; i++) {
+			texList.Add (Resources.Load ("underwater_frame" + i.ToString ()) as Texture);
 		}
 		
 		oldTime = Time.realtimeSinceStartup;
@@ -68,15 +68,6 @@ public class textureRenew : MonoBehaviour {
 		default:
 			break;
 		}
-		//bool isDivingNow = GameObject.Find("Main Camera").GetComponent<GyroCameraController>().is_diving_now;
-		//Debug.Log(isDivingNow);
-		//renderer.material.mainTexture = texList [frame];
-		
-		//frame++;
-		//if (frame >= initialLoopFrame && !isDivingNow) {
-		//	frame = 0;
-		//} else if (frame >= texList.Count) {
-		//	
-		//}
+
 	}
 }
