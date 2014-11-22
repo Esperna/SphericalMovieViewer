@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GyroCameraController : MonoBehaviour {
 
-	private bool is_diving_now = false;
+	public bool is_diving_now = false;
 	private float timer;
 	private const int waitingTime = 30;
 

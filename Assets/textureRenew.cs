@@ -25,6 +25,7 @@ public class textureRenew : MonoBehaviour {
 		float time = Time.realtimeSinceStartup - oldTime;
 		if (time >= INTERVAL)
 		{
+			Debug.Log(GameObject.Find("Main Camera").GetComponent<GyroCameraController>().is_diving_now);
 			renderer.material.mainTexture = texList [frame];
 			
 			frame++;
