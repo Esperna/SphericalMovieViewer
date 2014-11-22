@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\CameraControll.cs" />
      <Compile Include="Assets\DestroyInitialMessage.cs" />
+     <Compile Include="Assets\DivingStatus.cs" />
      <Compile Include="Assets\GyroCameraController.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
