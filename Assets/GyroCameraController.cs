@@ -2,19 +2,14 @@
 using System.Collections;
 
 public class GyroCameraController : MonoBehaviour {
-	
-	private GameObject gui_text;
-
-	void Start()
-	{
-		const int destroy_time = 3;
-		gui_text = GameObject.Find("InitialText");
-		Destroy (gui_text, destroy_time);
-	}
 
 	private bool is_diving_now = false;
 	private float timer;
 	private const int waitingTime = 30;
+
+	void Start()
+	{
+	}
 
 	void Update () 
 	{

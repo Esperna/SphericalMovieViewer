@@ -12,7 +12,7 @@ public class textureRenew : MonoBehaviour {
 	
 	void Start (){
 		texList = new List<Texture> ();
-		for (int i = 50; i <= 54; i++) {
+		for (int i = 0; i <= 100; i++) {
 			texList.Add (Resources.Load ("frame" + i.ToString ()) as Texture);
 		}
 		
