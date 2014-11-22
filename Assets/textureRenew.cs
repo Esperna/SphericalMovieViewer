@@ -9,10 +9,12 @@ public class textureRenew : MonoBehaviour {
 	
 	private float oldTime;
 	private const float INTERVAL = 0.1f;
+
+	private int initialLoopFrame = 10;
 	
 	void Start (){
 		texList = new List<Texture> ();
-		for (int i = 50; i <= 54; i++) {
+		for (int i = 0; i <= 100; i++) {
 			texList.Add (Resources.Load ("frame" + i.ToString ()) as Texture);
 		}
 		
@@ -25,10 +27,12 @@ public class textureRenew : MonoBehaviour {
 		float time = Time.realtimeSinceStartup - oldTime;
 		if (time >= INTERVAL)
 		{
+			bool isDivingNow = GameObject.Find("Main Camera").GetComponent<GyroCameraController>().is_diving_now;
+			Debug.Log(isDivingNow);
 			renderer.material.mainTexture = texList [frame];
 			
 			frame++;
-			if (frame >= texList.Count) {
+			if (frame >= texList.Count || (frame >= initialLoopFrame && !isDivingNow)) {
 				frame = 0;
 			}
 			oldTime = Time.realtimeSinceStartup;
