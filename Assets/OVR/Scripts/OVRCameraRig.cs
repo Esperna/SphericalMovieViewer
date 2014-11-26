@@ -90,7 +90,7 @@ public class OVRCameraRig : MonoBehaviour
 	}
 
 #endregion
-
+	float previous_position_y = 0;
 	private void UpdateAnchors()
 	{
 		OVRPose leftEye = OVRManager.display.GetEyePose(OVREye.Left);
@@ -103,6 +103,28 @@ public class OVRCameraRig : MonoBehaviour
 		leftEyeAnchor.localPosition = leftEye.position;
 		centerEyeAnchor.localPosition = 0.5f * (leftEye.position + rightEye.position);
 		rightEyeAnchor.localPosition = rightEye.position;
+
+	
+		float delta_y = rightEye.position.y - previous_position_y;
+		Debug.Log (delta_y);
+		switch (GameObject.Find ("Sherer100").GetComponent<textureRenew> ().divingStatus) {
+			case DivingStatus.FirstLoop:
+				if (delta_y > 0.01) {
+					GameObject.Find ("Sherer100").GetComponent<textureRenew> ().divingStatus = DivingStatus.GoingDown;
+				}
+				break;
+			case DivingStatus.FirstEndLoop:
+				if (delta_y < -0.01) {
+					GameObject.Find ("Sherer100").GetComponent<textureRenew> ().divingStatus = DivingStatus.GoingUp;
+				}
+				break;
+			case DivingStatus.GoingDown:
+			case DivingStatus.GoingUp:
+			default:
+				break;
+		}
+		previous_position_y = rightEye.position.y;
+	
 	}
 
 	private void UpdateCameras()
