@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/textureRenew.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GyroCameraController.cs">
     <Files>
-      <File FileName="Assets/textureRenew.cs" Line="21" Column="26" />
-      <File FileName="Assets/CameraControll.cs" Line="1" Column="1" />
+      <File FileName="Assets/GyroCameraController.cs" Line="10" Column="3" />
+      <File FileName="Assets/CameraControll.cs" Line="14" Column="28" />
+      <File FileName="Assets/textureRenew.cs" Line="63" Column="10" />
+      <File FileName="Assets/DivingStatus.cs" Line="12" Column="1" />
       <File FileName="Assets/DestroyInitialMessage.cs" Line="1" Column="1" />
-      <File FileName="Assets/DivingStatus.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

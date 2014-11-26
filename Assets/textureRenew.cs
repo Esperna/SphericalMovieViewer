@@ -12,16 +12,18 @@ public class textureRenew : MonoBehaviour {
 	private float oldTime;
 	private const float INTERVAL = 0.1f;
 
-	private int initialLoopFrame = 1;
-	private int endLoopFrame = 1;
-	
+	//private int initialLoopFrame = 1;
+	//private int endLoopFrame = 1;
+	private const int number_of_underwater_frame = 225;
+	private const int underwater_start_frame = 0;
+	private const int underwater_end_frame = underwater_start_frame + number_of_underwater_frame - 1;
+
 	void Start (){
-		divingStatus = DivingStatus.InitialLoop;
+		divingStatus = DivingStatus.FirstLoop;
 		texList = new List<Texture> ();
-		for (int i = 1; i <= 225; i++) {
+		for (int i = 1; i <= number_of_underwater_frame; i++) {
 			texList.Add (Resources.Load ("underwater_frame" + i.ToString ()) as Texture);
 		}
-		
 		oldTime = Time.realtimeSinceStartup;
 		frame = 0;
 	}
@@ -41,28 +43,22 @@ public class textureRenew : MonoBehaviour {
 		Debug.Log(divingStatus.ToString());
 
 		switch (divingStatus) {
-		case DivingStatus.InitialLoop:
-			frame++;
-			if (frame >= initialLoopFrame) {
-				frame = 0;
-			}
+		case DivingStatus.FirstLoop:
+			frame = underwater_start_frame;
+			break;
+		case DivingStatus.FirstEndLoop:
+			frame = underwater_end_frame;
 			break;
 		case DivingStatus.GoingDown:
 			frame++;
-			if (frame >= texList.Count - 1) {
-				divingStatus = DivingStatus.EndLoop;
-			}
-			break;
-		case DivingStatus.EndLoop:
-			frame--;
-			if (frame <= texList.Count - 1 - endLoopFrame) {
-				frame = texList.Count - 1;
+			if (frame >= underwater_end_frame) {
+				divingStatus = DivingStatus.FirstEndLoop;
 			}
 			break;
 		case DivingStatus.GoingUp:
 			frame--;
-			if (frame <= 0) {
-				divingStatus = DivingStatus.InitialLoop;
+			if (frame <= underwater_start_frame) {
+				divingStatus = DivingStatus.FirstLoop;
 			}
 			break;
 		default:
