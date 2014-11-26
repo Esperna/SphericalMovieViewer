@@ -18,8 +18,10 @@ public class textureRenew : MonoBehaviour {
 	void Start (){
 		divingStatus = DivingStatus.InitialLoop;
 		texList = new List<Texture> ();
-		for (int i = 1; i <= 77; i++) {
-			texList.Add (Resources.Load ("frame" + i.ToString ()) as Texture);
+		const int start_frame = 1;
+		const int end_frame = 225;
+		for (int i = start_frame; i <= end_frame; i++) {
+			texList.Add (Resources.Load ("underwater_frame" + i.ToString ()) as Texture);
 		}
 		
 		oldTime = Time.realtimeSinceStartup;
