@@ -1,6 +1,6 @@
 ﻿public enum DivingStatus {
-	InitialLoop,
+	FirstLoop,
 	GoingDown,
-	EndLoop,
+	FirstEndLoop,
 	GoingUp,
 }

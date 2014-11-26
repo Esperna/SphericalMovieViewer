@@ -11,12 +11,12 @@ public class GyroCameraController : MonoBehaviour {
 		Debug.Log (Input.acceleration.x);
 
 		switch (GameObject.Find ("Sherer100").GetComponent<textureRenew> ().divingStatus) {
-		case DivingStatus.InitialLoop:
+		case DivingStatus.FirstLoop:
 			if (Input.GetKeyDown(KeyCode.S)) {
 				GameObject.Find("Sherer100").GetComponent<textureRenew>().divingStatus = DivingStatus.GoingDown;
 			}
 			break;
-		case DivingStatus.EndLoop:
+		case DivingStatus.FirstEndLoop:
 			if(Input.GetKeyDown(KeyCode.W)){
 				GameObject.Find("Sherer100").GetComponent<textureRenew>().divingStatus = DivingStatus.GoingUp;
 			}
